@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 16px;}
+
+html { 
+    font-size: 16px;
+    scroll-behavior: smooth;}
+
+h1 { font-size: 4rem; }    /* 64px */
+h2 { font-size: 2rem; }    /* 32px */
+p  { font-size: 1.5rem; } /* 24px */
+h3 { font-size: 1rem; }    /* 16px */
+
+a {
+    text-decoration: none;
+    color: #000;}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);}
+
+.top {
+    background: rgba(225, 255, 143, 1);
+    background-image:
+        url('./img/Star1.png'),      
+        url('./img/Star2.png'),
+        url('./img/Star3.png'),      
+        url('./img/Star4.png'),      
+        url('./img/Star5.png');      
+    background-position: 
+    calc(100% + 450px) calc(100% + 0px),
+    calc(100% - 1330px) calc(100% - 650px),
+    calc(100% - 1250px) calc(100% - 710px),
+    calc(100% - 380px) calc(100% - 160px),
+    calc(100% - 480px) calc(100% - 210px);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.top__content {
+    padding-top: 196px;
+    padding-bottom: 156px;
+}
+
+.top__title {
+    padding-bottom: 24px;
+    font-weight: 700;
+    line-height: 78px;
+}
+
+.top__info {
+    padding-bottom: 48px;
+    /* font-weight: 700; */
+    line-height: 32px;  
+}
+
+.top__link {
+    width: 247px;
+    height: 66px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(32, 32, 39, 1);
+    border-radius: 60px;
+    background: rgba(32, 32, 39, 1);
+    color: white;
+    font-weight: 600;
+    line-height: 141.69%;
+    font-size: 24px;
+}
+
+.top__link:hover {
+    background: white;
+    color: black;
+    transition: 0.5s;
+}
+
+
+.top__line {
+    width: 100vw;          
+    height: 90px;
+    background: rgba(188, 236, 48, 1);
+    display: block; 
+    margin-left: calc(-50vw + 50%);    
+}
+
+
+.about {
+    background: rgba(32, 32, 39, 1);
+    background-image:
+        url('./img/Star6.png'),      
+        url('./img/Star7.png'),
+        url('./img/Star8.png');      
+    background-position: 
+    calc(100% + 145px) calc(100% - 700px),
+    calc(100% - 1380px) calc(100% - 610px),    
+    calc(100% - 1330px) calc(100% - 540px);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.about__text {
+    padding-top: 94px;
+    padding-bottom: 72px;
+}
+
+.about__text-title {
+    margin-bottom: 24px;
+    font-weight: 700;
+    line-height: 78px;
+    color: white;
+}
+
+.about__text-info {
+    font-weight: 400;
+    line-height: 32px;
+    color: white;
+}
+
+.about__games-block{
+    gap: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 1100px;
+}
+
+.game {
+    width: 378px;
+    min-height: 473px;
+    background: rgb(255, 255, 255);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.game:hover {
+    transform: scale(1.08);
+    transition: 0.4s;
+}
+
+.game__picture {
+    border-radius: 30px;
+    width: 378px;
+    height: 314px;
+}
+
+.picture-1 {
+    background: rgba(173, 97, 255, 1);
+    background-image: url(./img/pic1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.picture-2 {
+    background:rgba(253, 173, 0, 1);
+    background-image: url(./img/pic2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.picture-3 {
+    background: rgba(176, 174, 255, 1);
+    background-image: url(./img/pic3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.picture-4 {
+    background: rgba(39, 26, 88, 1);
+    background-image: url(./img/pic4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.picture-5 {
+    background: rgba(188, 236, 48, 1);
+    background-image: url(./img/pic5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.picture-6 {
+    background: rgba(39, 26, 88, 1);
+    background-image: url(./img/pic6.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.game__info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 26px;
+    padding: 32px;
+}
+
+.game__number {
+    width: 108px;
+    height: 36px;
+    color: rgba(32, 32, 39, 1);
+    font-weight: 500;
+    line-height: 110%;
+    border-radius: 52.58px;
+    background: rgb(247, 247, 247);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game__title {
+    font-weight: 700;
+    line-height: 39px;
+    color: rgba(32, 32, 39, 1);
+
+}

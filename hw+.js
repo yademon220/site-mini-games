@@ -1,4 +1,4 @@
-let a = 10; 
+let a = 10;
 alert(a);
 a = prompt("Введите значение");
 alert(a);

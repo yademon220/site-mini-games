@@ -99,7 +99,7 @@ a {
     height: 90px;
     background: rgba(188, 236, 48, 1);
     z-index: 1000;
-    top: 710px;
+    bottom: 0;
 }
 
 
@@ -410,6 +410,7 @@ footer {
         font-weight: 700;
         line-height: 39px;
         padding-bottom: 16px;
+        min-height: 117px;
     }
 
     .card__description {
@@ -459,11 +460,13 @@ footer {
         font-size: 16px;
     }
 
-
-
     .top__link-2 {
-    display: none;
-}
+        display: none;
+    }
+
+    .top__line {
+        bottom: 0;
+    }
 
     .about__text-title {
         font-size: 40px;
@@ -479,10 +482,16 @@ footer {
 
 }
 
+@media (max-width: 766px) {
+    .card__title {
+        min-height: unset;
+    }
+}
+
 @media (max-width: 424px) {
     .top__line {
         height: 50px;
-        top: 650px;
+        bottom: 0;
     }
 }
 

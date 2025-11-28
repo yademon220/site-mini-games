@@ -439,7 +439,8 @@ footer {
         font-weight: 700;
         line-height: 39px;
         padding-bottom: 16px;
-        min-height: 117px;
+        min-height: auto;
+        width: 250px;
     }
 
     .card__description {
@@ -452,8 +453,10 @@ footer {
     .card__button {
         width: 285px;
         height: 55px;
-        margin-bottom: 32px;
+        margin-bottom: 0;
+        font-size: 16px;
     }
+
 }
 
 @media (max-width: 800px) {

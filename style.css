@@ -14,12 +14,13 @@ html {
 h1 { font-size: 4rem; }    /* 64px */
 h2 { font-size: 4rem; }    /* 64px */
 h3 { font-size: 2rem; }    /* 32px */
+h4 { font-size: 1.5rem; }  /* 24px */
 p  { font-size: 1.5rem; } /* 24px */
-h4 { font-size: 1rem; }    /* 16px */
+h5 { font-size: 1rem; }    /* 16px */
 
 a {
     text-decoration: none;
-    color: #000;
+    color: rgba(32, 32, 39, 1);;
     cursor: url(./img/cursor.png) 10 10, auto;}
 
 .center {
@@ -86,7 +87,7 @@ a {
 
 .top__link:hover {
     background: white;
-    color: black;
+    color: rgba(32, 32, 39, 1);;
     transition: 0.4s;
 }
 
@@ -316,12 +317,12 @@ a {
     font-weight: 600;
     line-height: 141.69%;
     box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 1);
+    border: 1px solid rgba(32, 32, 39, 1);
 }
 
 .card__button:hover {
     background: white;
-    color: black;
+    color: rgba(32, 32, 39, 1);;
     transition: 0.4s;
     cursor: url(./img/cursor.png) 10 10, auto;
 }
@@ -400,11 +401,37 @@ footer {
         min-height: 551px;
         margin-top: unset;
     }
-}
 
-@media (max-width: 1024px) {
-    .card-revers {
-        flex-direction: row-reverse;
+    .mini-games__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start; 
+        gap: 24px; 
+        padding-bottom: 10px;
+        align-items: center;
+        box-sizing: border-box;
+        
+    }
+
+    .card {
+        width: 100%; 
+        max-width: 343px; 
+        min-height: 530px;
+        display: flex;
+        flex-direction: column-reverse; 
+        border-radius: 30px; 
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    .card__picture {
+        height: 285px;
+    }
+
+    .card__info {
+        padding: 29px;
+        max-width: 100%;
     }
 
     .card__title {
@@ -428,7 +455,6 @@ footer {
         margin-bottom: 32px;
     }
 }
-
 
 @media (max-width: 800px) {
    
@@ -528,6 +554,9 @@ footer {
 
     .footer-title {
         font-size: 16px;
+        color: rgba(0, 0, 0, 1);
+        font-weight: 600;
+        line-height: 29px;
     }
 }
 

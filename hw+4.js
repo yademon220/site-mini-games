@@ -79,35 +79,49 @@ saveSquare(r);
 
 
 // Задание 4
-let age = Number(prompt("Сколько вам лет?"));
-if (age<=0) {
-  alert("Вы ввели неправильное значение");
-} else if (isNaN(age)) {
-    alert("Пожалуйста, введите корректное число!");
-} else if (age>=13) {
-    alert("Добро пожаловать!");
-} else {
-  alert("Привет, друг!");
+function checkAge() {
+  let age = Number(prompt("Сколько вам лет?"));
+    if (isNaN(age)) {
+      alert("Пожалуйста, введите корректное число!");
+      return;
+  } 
+    if (age<0) {
+      alert("Вы ввели неправильное значение");
+      return;
+  } 
+    if (age>=13) {
+      alert("Добро пожаловать!");
+  } else {
+      alert("Привет, друг!");
+  }
 }
 
+checkAge()
 
 
 // Задание 5
-let n1 = Number(prompt("Введите число 1:"));
-let n2 = Number(prompt("Введите число 2:"));
-let result = 0;
-
-function multiply (number1, number2) {
-  if (isNaN(number1) || isNaN(number2)) {
-    console.log("Одно или оба значения не являются числом");
-    return;
-  } else {
-   result = number1 * number2;
-  }
-  console.log(result);
+function multiply(number1, number2) {
+    if (isNaN(number1) || isNaN(number2)) {
+        return null;
+    }
+    return number1 * number2;
 }
 
-multiply(n1, n2);
+function runCalculation() {
+    const n1 = Number(prompt("Введите число 1:"));
+    const n2 = Number(prompt("Введите число 2:"));
+
+    const result = multiply(n1, n2);
+
+    if (result === null) {
+        alert("Одно или оба значения не являются числом");
+    } else {
+        alert(`Результат: ${result}`);
+        console.log(result);
+    }
+}
+
+runCalculation();
 
 
 

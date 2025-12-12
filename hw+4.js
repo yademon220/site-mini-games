@@ -1,5 +1,5 @@
 // Задание 1
-
+function minNumb() {
 const a = Number(prompt("Введите число №1:"));
 const b = Number(prompt("Введите число №2:"));
 let min = 0;
@@ -12,8 +12,12 @@ else if (a<b) {
 else {min = a;
 }
 alert("Меньшее число: " + min);
+}
+
+minNumb()
 
 // Задание 1// тоже самое но через цикл
+function minNumb2() {
 const numbers = [];
 for (let i = 0; i < 2; i++) {
     const input = prompt(`Введите число №${i + 1}:`);
@@ -26,55 +30,42 @@ for (let i = 1; i < numbers.length; i++) {
     }
 }
 alert("Меньшее число: " + min);
+}
 
-
+minNumb2()
 
 // Задание 2
+function evenOdd() {
 let c = Number(prompt("Введите число:"));
 if (isNaN(c)) {
     alert("Пожалуйста, введите корректное число!");
 } else {
     c % 2 == 0 ? alert('Число четное') : alert('Число НЕчетное')};
+}
+
+evenOdd()
 
 
 
 // Задание 3
-let k = Number(prompt("Введите число:"));
-
-function getSquare(number) {
-    return number ** 2;
-}
-
-const squaredValue = getSquare(k);
-console.log(`Сохраненный результат: ${squaredValue}`);
-
-printSquare(k);
-
+// Задание 3 Первая функция
 function printSquare(number) {
-    const square = getSquare(number);
-    console.log(`Квадрат числа ${number} = ${square}`);
+  const square = number ** 2;
+  console.log(`Квадрат числа ${number} = ${square}`);
 }
+printSquare(5); 
+printSquare(3); 
 
-let t = Number(prompt("Введите число 1:"));
-
+// Задание 3 Вторая функция
 function getSquare(number) {
   return number ** 2;
 }
 
-const result = getSquare(t);
-console.log(`Сохраненный результат 1: ${result}`);
+const result = getSquare(4);
+console.log(result); 
 
-
-
-let r = Number(prompt("Введите число 2:"));
-
-
-function saveSquare (number) {
-  const square = getSquare(number);
-  console.log(`Сохраненный результат 2: ${square}`);
-}
-
-saveSquare(r);
+const area = getSquare(6) * 2; 
+console.log(area); 
 
 
 
@@ -126,19 +117,18 @@ runCalculation();
 
 
 // Задание 6
-let j1 = Number(prompt("Введите число:"));
-let result = 0;
-
-function getCube (number1) {
-  if (isNaN(number1)) {
+function getCube() {
+  let j1 = Number(prompt("Введите число:"));
+  let result = 0;
+  if (isNaN(j1)) {
     console.log("Переданный параметр не является числом");
     return;
   } 
-    result = number1 ** 3;
-    console.log(number1 + " в кубе равняется " + result);
+    result = j1 ** 3;
+    console.log(j1 + " в кубе равняется " + result);
 }
 
-getCube(j1);
+getCube();
 
 
 // Задание 7

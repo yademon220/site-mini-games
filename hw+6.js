@@ -50,8 +50,8 @@ let ARNumbers = [];
  let arbitraryArraySize = Math.floor(userInput / 2);
  
  for (let w = 0; w < arbitraryArraySize; w++) {
-  let arbitraryArraySize = Math.floor(Math.random() * (userInput + 1));
-  ARNumbers.push(arbitraryArraySize);
+  let arbitraryArrayNumber = Math.floor(Math.random() * (userInput + 1));
+  ARNumbers.push(arbitraryArrayNumber);
  }                                    
                                   
 console.log(ARNumbers);

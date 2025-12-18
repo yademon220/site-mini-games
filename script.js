@@ -231,3 +231,156 @@ ${quiz[i].options.join('\n')}
 }
 
 Quiz1();
+
+
+
+//«Камень, ножницы, бумага»
+function rockPaperScissors() {
+  let userHit = prompt(`Это "Камень, ножницы, бумага".
+Игра началась.
+Что поставишь?`);
+
+  const arrWeapons = ['камень', 'ножницы', 'бумага'];
+
+  // Проверка на пустой ввод
+  if (!userHit || userHit.trim() === '') {
+    alert('Вы не ввели слово');
+    return;
+  }
+
+  // Проверка на корректность символов (только буквы)
+  if (!/^[a-zA-Za-яА-ЯёЁ]+$/.test(userHit.trim())) {
+    alert('Пожалуйста, введите только буквы!');
+    return;
+  }
+
+  // Приводим ввод пользователя к нижнему регистру и убираем пробелы
+  userHit = userHit.trim().toLowerCase();
+
+  // Проверяем, есть ли введённое слово в списке допустимых
+  const userIndex = arrWeapons.indexOf(userHit);
+  if (userIndex === -1) {
+    alert('Пожалуйста, введите "камень", "ножницы" или "бумага"');
+    return;
+  }
+
+  // Случайный выбор компьютера
+  const AINumberHit = Math.floor(Math.random() * 3);
+  const AIHit = arrWeapons[AINumberHit];
+
+  let refereeDecision;
+
+  // Определяем результат
+  if (userIndex === AINumberHit) {
+    refereeDecision = 'Ничья';
+  } else if (
+    (userIndex === 0 && AINumberHit === 1) || // камень > ножницы
+    (userIndex === 1 && AINumberHit === 2) || // ножницы > бумага
+    (userIndex === 2 && AINumberHit === 0)    // бумага > камень
+  ) {
+    refereeDecision = 'Победа';
+  } else {
+    refereeDecision = 'Поражение';
+  }
+
+  // Итоговый результат
+  alert(`
+Игра завершена!
+
+Вы поставили: ${userHit}.
+Противник поставил: ${AIHit}.
+
+Итог: ${refereeDecision}.
+
+Спасибо за участие!
+  `);
+}
+
+
+
+
+function rockPaperScissors1(onStart, onInputError, onResult) {
+  // Вызываем колбэк начала игры
+  if (typeof onStart === 'function') {
+    onStart();
+  }
+
+  let userHit = prompt(`Это "Камень, ножницы, бумага".
+Игра началась.
+Что поставишь?`);
+
+  const arrWeapons = ['камень', 'ножницы', 'бумага'];
+
+  // Проверка на пустой ввод
+  if (!userHit || userHit.trim() === '') {
+    if (typeof onInputError === 'function') {
+      onInputError('Вы не ввели слово');
+    } else {
+      alert('Вы не ввели слово');
+    }
+    return;
+  }
+
+  // Проверка на корректность символов (только буквы)
+  if (!/^[a-zA-Za-яА-ЯёЁ]+$/.test(userHit.trim())) {
+    if (typeof onInputError === 'function') {
+      onInputError('Пожалуйста, введите только буквы!');
+    } else {
+      alert('Пожалуйста, введите только буквы!');
+    }
+    return;
+  }
+
+  // Приводим ввод пользователя к нижнему регистру и убираем пробелы
+  userHit = userHit.trim().toLowerCase();
+
+  // Проверяем, есть ли введённое слово в списке допустимых
+  const userIndex = arrWeapons.indexOf(userHit);
+  if (userIndex === -1) {
+    if (typeof onInputError === 'function') {
+      onInputError('Пожалуйста, введите "камень", "ножницы" или "бумага"');
+    } else {
+      alert('Пожалуйста, введите "камень", "ножницы" или "бумага"');
+    }
+    return;
+  }
+
+  // Случайный выбор компьютера
+  const AINumberHit = Math.floor(Math.random() * 3);
+  const AIHit = arrWeapons[AINumberHit];
+
+  let refereeDecision;
+
+  // Определяем результат
+  if (userIndex === AINumberHit) {
+    refereeDecision = 'Ничья';
+  } else if (
+    (userIndex === 0 && AINumberHit === 1) || // камень > ножницы
+    (userIndex === 1 && AINumberHit === 2) || // ножницы > бумага
+    (userIndex === 2 && AINumberHit === 0)    // бумага > камень
+  ) {
+    refereeDecision = 'Победа';
+  } else {
+    refereeDecision = 'Поражение';
+  }
+
+  // Вызываем колбэк результата
+  if (typeof onResult === 'function') {
+    onResult({
+      userChoice: userHit,
+      aiChoice: AIHit,
+      result: refereeDecision
+    });
+  } else {
+    alert(`
+Игра завершена!
+
+Вы поставили: ${userHit}.
+Противник поставил: ${AIHit}.
+
+Итог: ${refereeDecision}.
+
+Спасибо за участие!
+    `);
+  }
+}

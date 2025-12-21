@@ -230,8 +230,6 @@ ${quiz[i].options.join('\n')}
   `);
 }
 
-Quiz1();
-
 
 
 //«Камень, ножницы, бумага»
@@ -384,3 +382,26 @@ function rockPaperScissors1(onStart, onInputError, onResult) {
     `);
   }
 }
+
+
+
+//Генератор случайных цветов
+const randomColor = document.querySelector('#random-color');
+const bgColors = document.querySelectorAll('.bgcolor');
+
+randomColor.addEventListener('click', () => {
+  const apple = [];
+  for (let i = 0; i < 4; i++) {
+    apple.push(Math.floor(Math.random() * 255));
+  }
+  const a = apple[0], b = apple[1], c = apple[2], d = apple[3] / 255;
+
+  bgColors.forEach(el => {
+  el.style.backgroundColor = `rgba(${a}, ${b}, ${c}, ${d})`;
+  });
+});
+
+
+
+
+

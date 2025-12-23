@@ -70,13 +70,13 @@ rangeRandomNumbers(10, 20);
 
 
 //Задание 8
-let currentDate = new Date();
+let currentDate1 = new Date();
 let options = { 
     day: '2-digit',
     month: '2-digit', 
     year: 'numeric',
 };
-console.log(currentDate.toLocaleString('ru-RU', options));
+console.log(currentDate1.toLocaleString('ru-RU', options));
 
 
 //Задание 9
